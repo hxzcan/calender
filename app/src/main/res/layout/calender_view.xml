@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--顶部头部-->
+    <RelativeLayout
+        android:id="@+id/calender_header"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp">
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/previous"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="{fa-angle-left}"
+            android:textSize="50sp"
+            android:textColor="@android:color/holo_orange_light"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/text_date"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="June 2017"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:layout_toLeftOf="@+id/next"
+            android:layout_toRightOf="@+id/previous"
+            />
+
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/next"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="{fa-angle-right}"
+            android:gravity="center"
+            android:textSize="50sp"
+            android:textColor="@android:color/holo_orange_light"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="20dp"
+            />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/calender_week_header"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:numColumns="7"
+        android:gravity="center"
+        android:listSelector="@android:color/transparent"
+        >
+    </GridView>
+
+    <GridView
+        android:id="@+id/calender_day"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="7"
+        android:gravity="center"
+        android:listSelector="@drawable/bg_grideview"
+        >
+    </GridView>
+
+</LinearLayout>
